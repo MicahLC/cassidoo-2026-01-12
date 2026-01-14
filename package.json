@@ -1,0 +1,23 @@
+{
+  "name": "cassidoo-2026-01-12",
+  "version": "1.0.0",
+  "description": "solution for interview problem posed in cassidoo newsletter sent on 2026-01-12",
+  "license": "MIT",
+  "author": "Micah Lapping-Carr",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node index.js",
+    "test": "mocha --require ts-node/register 'test/**/*.ts'"
+  },
+  "devDependencies": {
+    "@types/chai": "^5.2.2",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^24.9.0",
+    "chai": "^6.2.0",
+    "mocha": "^11.7.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
