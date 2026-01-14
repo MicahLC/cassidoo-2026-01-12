@@ -3,10 +3,6 @@ import {expect} from 'chai';
 import { hungryBears } from '../src/hungryBears.ts';
 
 describe("hungryBears", function(){
-    it("should return an array for empty input", function() {
-        expect(hungryBears([])).to.be.a('array');
-    });
-
     it("should satisfy the email example", function() {
         const bears = [
             { name: 'Baloo', hunger: 6 },
@@ -18,7 +14,12 @@ describe("hungryBears", function(){
         expect(hungryBears(bears)).to.eql(["Chicago", "Winnie"]);
     });
 
-    it("should return empty for one input", function() {
+    it("should return empty array for empty input", function() {
+        expect(hungryBears([])).to.eql([]);
+    });
+
+
+    it("should return empty array for one input", function() {
         const bears = [
             { name: 'George', hunger: 1 }
         ];
@@ -40,5 +41,13 @@ describe("hungryBears", function(){
             { name: "Hungry", hunger: 1 }
         ];
         expect(hungryBears(bears)).to.eql(["Hungry"]);
+    });
+
+    it("should return empty if a bear has infinite hunger", function() {
+        const bears = [
+            { name: "Infinity", hunger: Infinity },
+            { name: "Regulo", hunger: 10 }
+        ];
+        expect(hungryBears(bears)).to.eql([]);
     });
 });
