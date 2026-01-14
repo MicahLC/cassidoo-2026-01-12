@@ -9,7 +9,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node index.js",
-    "test": "mocha --require ts-node/register 'test/**/*.ts'"
+    "test": "mocha --require ts-node/register test/*.spec.ts"
   },
   "devDependencies": {
     "@types/chai": "^5.2.2",
